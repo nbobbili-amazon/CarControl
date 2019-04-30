@@ -1,0 +1,24 @@
+{
+  "$schema": "http://iot.bzh/download/public/schema/json/ctl-schema.json",
+  "metadata": {
+    "uid": "carcontrol",
+    "version": "0.1",
+    "api": "carcontrol",
+    "info": "Car Control API"
+  },
+
+  "plugins": [{
+    "uid": "carcontrol",
+    "info": "Plugin to handle carcontrol API",
+    "libs": [
+      "carcontrol-api.ctlso"
+    ]
+  }],
+
+
+  "controls": [{
+      "uid": "ping",
+      "privileges": "urn:AGL:permission:carcontrol:ping:public",
+      "action": "plugin://carcontrol#ping"
+    }]
+}
